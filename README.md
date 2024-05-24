@@ -1,3 +1,3 @@
-# Ted and Olivia Awesome Accomplishments Site
+# Ted & Olivia Accomplishments
 
-![Deploy to https://lydongcanh.github.io/ted-olivia-accomplishments](https://github.com/lydongcanh/ted-olivia-accomplishments/actions/workflows/main.yml/badge.svg)
+![Deployment status](https://github.com/lydongcanh/ted-olivia-accomplishments/actions/workflows/main.yml/badge.svg)
