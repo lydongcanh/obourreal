@@ -1,22 +1,22 @@
-import { AreaChart } from "@mantine/charts";
-import { data } from "./data.ts";
+import { MantineProvider, Container, Text, Title, Space, Center, Loader } from '@mantine/core';
 
 function App() {
   return (
-    <div style={{ padding: 24 }}>
-      <AreaChart
-        h={300}
-        data={data}
-        dataKey="date"
-        series={[
-          { name: "Apples", color: "indigo.6" },
-          { name: "Oranges", color: "blue.6" },
-          { name: "Tomatoes", color: "teal.6" },
-        ]}
-        curveType="linear"
-        style={{ maxWidth: 500 }}
-      />
-    </div>
+    <MantineProvider>
+      <Container>
+        <Center style={{ height: '100vh', flexDirection: 'column' }}>
+          <Loader size="xl" variant="dots" />
+          <Space h="xl" />
+          <Title order={1}>
+            Coming Soon
+          </Title>
+          <Space h="md" />
+          <Text size="lg">
+            Our website is under construction. We&apos;ll be here soon with our new awesome site.
+          </Text>
+        </Center>
+      </Container>
+    </MantineProvider>
   );
 }
 
