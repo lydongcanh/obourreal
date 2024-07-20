@@ -1,4 +1,7 @@
 import { MantineProvider, Container, Text, Title, Space, Center, Loader } from '@mantine/core';
+import LoginButton from './components/LoginButton';
+import LogoutButton from './components/LogoutButton';
+import UserProfile from './components/UserProfile';
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
           <Text size="lg">
             Our website is under construction. We&apos;ll be here soon with our new awesome site.
           </Text>
+          <LoginButton />
+          <LogoutButton />
+          <UserProfile />
         </Center>
       </Container>
     </MantineProvider>
