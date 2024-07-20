@@ -1,3 +1,3 @@
-# Ted & Olivia Accomplishments
+# Obourreal
 
-![Deployment status](https://github.com/lydongcanh/ted-olivia-accomplishments/actions/workflows/main.yml/badge.svg)
+![Deployment status](https://github.com/lydongcanh/obourreal/actions/workflows/main.yml/badge.svg)
