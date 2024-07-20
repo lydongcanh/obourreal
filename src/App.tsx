@@ -1,29 +1,22 @@
-import { MantineProvider, Container, Text, Title, Space, Center, Loader } from '@mantine/core';
-import LoginButton from './components/LoginButton';
-import LogoutButton from './components/LogoutButton';
-import UserProfile from './components/UserProfile';
+import React from "react";
+import { MantineProvider } from "@mantine/core";
+import Dashboard from "./components/Dashboard";
+import { Auth0Provider } from "@auth0/auth0-react";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <MantineProvider>
-      <Container>
-        <Center style={{ height: '100vh', flexDirection: 'column' }}>
-          <Loader size="xl" variant="dots" />
-          <Space h="xl" />
-          <Title order={1}>
-            Coming Soon
-          </Title>
-          <Space h="md" />
-          <Text size="lg">
-            Our website is under construction. We&apos;ll be here soon with our new awesome site.
-          </Text>
-          <LoginButton />
-          <LogoutButton />
-          <UserProfile />
-        </Center>
-      </Container>
-    </MantineProvider>
+    <Auth0Provider
+      domain="obourreal.au.auth0.com"
+      clientId="qcLlYLHLQCan4ONxg6xDXz0gKviAwWyn"
+      authorizationParams={{
+        redirect_uri: window.location.origin,
+      }}
+    >
+      <MantineProvider>
+        <Dashboard />
+      </MantineProvider>
+    </Auth0Provider>
   );
-}
+};
 
 export default App;
