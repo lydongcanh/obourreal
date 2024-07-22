@@ -23,7 +23,11 @@ const Profile: React.FC = () => {
 
   const handleGetAccessToken = async () => {
     try {
-      const token = await getAccessTokenSilently();
+      const token = await getAccessTokenSilently({
+        authorizationParams: {
+          getSilentTokenId :crypto.randomUUID(),
+        }
+      });
       console.log("Get access token successfully " + token);
       setAccessToken(token);
 
@@ -40,7 +44,7 @@ const Profile: React.FC = () => {
   const handleLoginAgain = async () => {
     loginWithRedirect({
       authorizationParams: {
-        randomValue: crypto.randomUUID(),
+        redirectId: crypto.randomUUID(),
       },
     });
   };
