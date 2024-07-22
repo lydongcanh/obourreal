@@ -23,7 +23,9 @@ const Sidebar: React.FC = () => {
   const { user, logout } = useAuth0();
 
   const handleLogout = () => {
-    logout({ logoutParams: { returnTo: window.location.origin } });
+    logout({
+      logoutParams: { returnTo: `${window.location.origin}/obourreal` },
+    });
   };
 
   return (
