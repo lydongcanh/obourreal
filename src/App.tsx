@@ -10,6 +10,7 @@ const App: React.FC = () => {
       clientId="qcLlYLHLQCan4ONxg6xDXz0gKviAwWyn"
       authorizationParams={{
         redirect_uri: window.location.origin,
+        audience: "https://identity.obourreal.com/api"
       }}
     >
       <MantineProvider>
