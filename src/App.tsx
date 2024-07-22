@@ -9,7 +9,7 @@ const App: React.FC = () => {
       domain="obourreal.au.auth0.com"
       clientId="qcLlYLHLQCan4ONxg6xDXz0gKviAwWyn"
       authorizationParams={{
-        redirect_uri: window.location.origin,
+        redirect_uri: `${window.location.origin}/obourreal`,
         audience: "https://identity.obourreal.com/api"
       }}
     >
